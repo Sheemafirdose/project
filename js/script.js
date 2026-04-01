@@ -1,5 +1,5 @@
 function navigateTo(page) {
-    window.location.href = page;
+    window.location.href = toAbsolutePath(page);
 }
 
 function toAbsolutePath(path) {
@@ -43,7 +43,7 @@ function initJudgeProtection() {
 
             const judgeLoggedIn = localStorage.getItem('judgeLoggedIn') === 'true';
             if (judgeLoggedIn) {
-                window.location.href = targetPage;
+                window.location.href = toAbsolutePath(targetPage);
                 return;
             }
 
