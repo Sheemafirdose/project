@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Debate Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="assets/logo2.jpg" alt="College Logo" class="college-logo" onerror="this.src='https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=100'">
+            </div>
+            <div class="title-section">
+                <h1>Advanced Debate Management System</h1>
+                <p class="subtitle">Comprehensive Platform for Debate Events</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Dashboard</a>
+            <a href="pages/about.html" class="nav-link">About</a>
+            <a href="pages/help.html" class="nav-link">Help</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="dashboard-grid">
+            <div class="card" onclick="navigateTo('pages/register.html')">
+                <div class="card-icon">&#128101;</div>
+                <h3>Register Participant</h3>
+                <p>Add new debate participants to the system</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('pages/judge.html')">
+                <div class="card-icon">&#9878;</div>
+                <h3>Judge Login</h3>
+                <p>Login and give scores to participants</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('pages/participants.html')" data-judge-only="true">
+                <div class="card-icon">&#128203;</div>
+                <h3>Participant Manager</h3>
+                <p>Manage participant lineup and assignments</p>
+                <div class="badge">Judge Only</div>
+            </div>
+
+            <div class="card" onclick="navigateTo('pages/schedule.html')" data-judge-only="true">
+                <div class="card-icon">&#128197;</div>
+                <h3>Schedule Slots</h3>
+                <p>Assign date, time, and venue for debates</p>
+                <div class="badge">Judge Only</div>
+            </div>
+
+            <div class="card" onclick="navigateTo('pages/results.html')">
+                <div class="card-icon">&#127942;</div>
+                <h3>Results</h3>
+                <p>View rankings and debate outcomes</p>
+            </div>
+
+            <div class="card" onclick="navigateTo('pages/logs.html')">
+                <div class="card-icon">&#128221;</div>
+                <h3>Event Logs</h3>
+                <p>Track all system activities and updates</p>
+            </div>
+        </div>
+
+        <section class="bottom-links">
+            <div class="bottom-link-card" onclick="navigateTo('pages/about.html')">
+                <h3>About</h3>
+                <p>Learn about system modules, workflow, and key features.</p>
+            </div>
+            <div class="bottom-link-card" onclick="navigateTo('pages/help.html')">
+                <h3>Help</h3>
+                <p>Get quick guidance, common fixes, and operational instructions.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Developed by <strong>Prathap</strong></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+

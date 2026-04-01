@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Manager - Debate System</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="../assets/logo2.jpg" alt="College Logo" class="college-logo" onerror="this.src='https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=100'">
+            </div>
+            <div class="title-section">
+                <h1>Participant Manager</h1>
+                <p class="subtitle">Manage debate participants and assignments</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="../index.html" class="nav-link">Dashboard</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="help.html" class="nav-link">Help</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+              <a href="../index.html" class="btn btn-back">&lt;- Back to Dashboard</a>
+            <button onclick="exportLineup()" class="btn btn-primary">Export Lineup</button>
+            <button onclick="cleanupDuplicates()" class="btn btn-primary">Cleanup Duplicates</button>
+            <button onclick="clearAllData()" class="btn btn-secondary">Clear All Data</button>
+        </div>
+
+        <div class="glass-container">
+            <h2 style="margin-bottom: 1.5rem;">Filter Participants</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label for="filterCollege">Filter by College</label>
+                    <select id="filterCollege" onchange="filterParticipants()">
+                        <option value="">All Colleges</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label for="filterSide">Filter by Side</label>
+                    <select id="filterSide" onchange="filterParticipants()">
+                        <option value="">All Sides</option>
+                        <option value="For">For</option>
+                        <option value="Against">Against</option>
+                        <option value="Unassigned">Unassigned</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container glass-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reg Number</th>
+                        <th>Name</th>
+                        <th>College</th>
+                        <th>Topic</th>
+                        <th>Side</th>
+                        <th>Scheduled Slot</th>
+                        <th>Score</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="participantsTable">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Developed by <strong>Prathap</strong></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/participants.js"></script>
+</body>
+</html>
+
+
+
+

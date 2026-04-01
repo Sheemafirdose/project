@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Logs - Debate System</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="../assets/logo2.jpg" alt="College Logo" class="college-logo" onerror="this.src='https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=100'">
+            </div>
+            <div class="title-section">
+                <h1>Event Logs</h1>
+                <p class="subtitle">Track all system activities</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="../index.html" class="nav-link">Dashboard</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="help.html" class="nav-link">Help</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="glass-container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                <h2>Activity Timeline</h2>
+                <div>
+                    <button onclick="exportLogs()" class="btn btn-primary">Export Logs</button>
+                    <button onclick="clearLogs()" class="btn btn-secondary">Clear Logs</button>
+                </div>
+            </div>
+
+            <div id="logsContainer">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Developed by <strong>Prathap</strong></p>
+    </footer>
+
+    <style>
+        .log-entry {
+            background: rgba(26, 33, 52, 0.58);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 8px 18px rgba(2, 6, 23, 0.28);
+        }
+
+        .log-entry.registration {
+            border-left-color: var(--success-color);
+        }
+
+        .log-entry.score {
+            border-left-color: var(--warning-color);
+        }
+
+        .log-entry.delete {
+            border-left-color: var(--error-color);
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .log-action {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .log-time {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+
+        .log-details {
+            color: #dbeafe;
+            font-size: 0.95rem;
+        }
+    </style>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/logs.js"></script>
+</body>
+</html>
+
+
+
+

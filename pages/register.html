@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Participant - Debate System</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="../assets/logo2.jpg" alt="College Logo" class="college-logo" onerror="this.src='https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=100'">
+            </div>
+            <div class="title-section">
+                <h1>Register Participant</h1>
+                <p class="subtitle">Add new participants to the debate</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="../index.html" class="nav-link">Dashboard</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="help.html" class="nav-link">Help</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="glass-container" style="max-width: 600px; margin: 0 auto;">
+            <h2 style="margin-bottom: 1.5rem;">Participant Registration Form</h2>
+
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regNumber">Registration Number *</label>
+                    <input type="text" id="regNumber" name="regNumber" placeholder="e.g., REG-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="college">College/Institution *</label>
+                    <input type="text" id="college" name="college" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Debate Topic *</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">Select a topic</option>
+                        <option value="Technology in Education">Technology in Education</option>
+                        <option value="Climate Change Policy">Climate Change Policy</option>
+                        <option value="Social Media Impact">Social Media Impact</option>
+                        <option value="AI and Ethics">AI and Ethics</option>
+                        <option value="Healthcare Reform">Healthcare Reform</option>
+                        <option value="Economic Development">Economic Development</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Debate Experience</label>
+                    <select id="experience" name="experience">
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">Register Participant</button>
+                    <a href="../index.html" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Developed by <strong>Prathap</strong></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>
+
+
+
+
